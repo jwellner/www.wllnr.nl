@@ -16,12 +16,12 @@ var gulp = require('gulp'),
     prefix = require('gulp-autoprefixer');
     
 
-gulp.task('clean.static', function() {
-    return gulp.src(['./build/*', '!./build/css', '!./build/images', '!*.png', '!*.ico'])
+gulp.task('clean', function() {
+    return gulp.src(['./build/*'])
         .pipe(rimraf());
 });
 
-gulp.task('build.static', ['clean.static'], function() {
+gulp.task('build.static', function() {
     return gulp.src("./src/**/*.md")
         .pipe(gulp_front_matter()).on("data", function(file) {
             assign(file, file.frontMatter); 
