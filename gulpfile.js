@@ -28,7 +28,8 @@ gulp.task('build.static', function() {
             delete file.frontMatter;
         })
         .pipe(
-            gulpsmith()     
+            gulpsmith()
+            .use(fileName())
             .use(collections({
                 pages: {
                     pattern: 'content/pages/*.md'
@@ -90,7 +91,7 @@ gulp.task('watch:content', function () {
 });
 
 gulp.task('watch:templates', function () {
-    return gulp.watch('./src/layouts/*.html', ['build.static']);
+    return gulp.watch('./src/templates/*.html', ['build.static']);
 });
 
 gulp.task('copy:assets', function() {
@@ -107,3 +108,15 @@ gulp.task('serve', ['build', 'watch'], function() {
             fallback: 'index.html'
         }));
 });
+
+/**
+ * Adds source filename to file like front matter
+ */
+function fileName(options) {
+    return function (files, metalsmith, done) {
+        Object.keys(files).forEach(function (file) {
+            files[file].original_filename = file;
+        });
+        done();
+    };
+}
