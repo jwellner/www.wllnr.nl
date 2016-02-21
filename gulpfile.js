@@ -34,7 +34,7 @@ gulp.task('build.static', ['clean.static'], function() {
                     pattern: 'content/pages/*.md'
                 },
                 posts: {
-                    pattern: 'content/posts/*.md',
+                    pattern: 'content/posts/**/*.md',
                     sortBy: 'date',
                     reverse: true,
                     limit: 25
