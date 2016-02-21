@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ title }} : Jeroen Wellner{% endblock %}
+
+{% block head %}
+  {% parent %}
+{% endblock %}
+
+{% block content %}
+<section class="clear">
+	<div class="col-4-tablet col-12">
+		<h3>Over mij</h3>
+
+		<p>Building things for the Internet since 1996.</p>
+
+		<a href="/over-mij/">Over mij</a>
+	</div>
+	<div class="col-4-tablet col-12">
+		<h3>Projecten</h3>
+
+		<p>App factory with Ionic, AngularJS and Cordova.</p>
+
+		<a href="/projecten/">Projecten</a>
+	</div>
+	<div class="col-4-tablet col-12">
+		<h3>Blog</h3>
+
+		<p>Technologie, muziek en meer dingen die mij bezig houden zijn te lezen op mijn blog.</p>
+
+		<a href="/blog/">Blog</a>
+	</div>
+</section>
+{% endblock %}
