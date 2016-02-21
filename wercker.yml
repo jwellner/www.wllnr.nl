@@ -26,7 +26,15 @@ build:
     - npm-install
     # A step that executes `npm test` command
     - npm-test
-
+    # Gulp build
+    - hgen/gulp:
+        tasks: build
+    # Deploy to gcs
+    - michilu/gcs-website-deploy:
+      bucket: www.wllnr.nl
+      project: $GOOGLE_PROJECT_ID
+      token: $GOOGLE_REFRESH_TOKEN
+      dir: build
     # A custom script step, name value is used in the UI
     # and the code value contains the command that get executed
     - script:
