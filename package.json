@@ -31,7 +31,7 @@
     "swig": "^1.4.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 0",
     "deploy": "gsutil -m rsync -r -d build/ gs://www.wllnr.nl"
   },
   "author": "Jeroen Wellner",
