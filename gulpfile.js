@@ -43,7 +43,7 @@ gulp.task('build.static', function() {
 
                 },
                 lastPosts: {
-                    pattern: 'content/posts/*.md',
+                    pattern: 'content/posts/**/*.md',
                     sortBy: 'date',
                     reverse: true,
                     limit: 5
@@ -63,7 +63,7 @@ gulp.task('build.static', function() {
             )
             .use(layouts({
                 engine: 'swig',
-                directory: 'src/layouts'
+                directory: 'src/templates'
             }))
             .use(blc({
                 warn: true
