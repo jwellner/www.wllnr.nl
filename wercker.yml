@@ -7,14 +7,16 @@ build:
     - hgen/gulp:
         tasks: build
 
-    - michilu/gcs-website-deploy:
-      bucket: www.wllnr.nl
-      project: $GOOGLE_PROJECT_ID
-      token: $GOOGLE_REFRESH_TOKEN
-      dir: build
-
     - script:
         name: echo nodejs information
         code: |
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
+
+deploy:
+  steps:
+      - michilu/gcs-website-deploy:
+        bucket: www.wllnr.nl
+        project: $GOOGLE_PROJECT_ID
+        token: $GOOGLE_REFRESH_TOKEN
+        dir: build
