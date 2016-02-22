@@ -29,5 +29,7 @@ After the static files are build I can deploy the site with a simple rsync to Go
 
 I will go more in detail in a next blog post!
 
+.
+
 
 
