@@ -1,31 +1,41 @@
 ---
 layout: page.html
-title: Over mij
+slug: about
+title: About me
 ---
+I am Jeroen Wellner, born may 13th 1979, living in Utrecht in The Netherlands. I am a passionate amateur road cyclist ([add me on Strava](https://www.strava.com/athletes/461379)) and web developer.
 
-Mijn naam is Jeroen, ik ben freelance web ontwikkelaar met ruim 15 jaar ervaring in het ontwikkelen van Internet gerelateerde oplossingen. Naast mijn jarenlange ervaring met PHP ben ik ook gecertificeerd Java ontwikkelaar. Ook op front-end gebied heb ik ruime ervaring en kennis van de laatste trends en technieken.
+## Work
+I make my living as a Freelance (front end) developer at my own consultancy firm Wellner Consultancy BV. With over 20 years experience, I help clients like [Centraal Beheer Achmea](https://www.centraalbeheer.nl), [Agis zorgverzekeringen](http://www.agisweb.nl), [Rijkswaterstaat](http://www.rijkswaterstaat.nl) and many more, to build cool things for the Internet.
 
-### Waar werk ik op dit moment graag mee?
+## Technology stack 
+I love trying new technologies. Below is a list of technologies I currently like to work with (no particular order).
 	
   * [AngularJS](https://angularjs.org/)
   * [Ionic Framework](http://ionicframework.com/)
   * [Cordova](http://cordova.apache.org)
-  * [Gulp](http://gulpjs.com/) / [Grunt](http://gruntjs.com/)
+  * [Gulp](http://gulpjs.com/)
   * [Slim](http://www.slimframework.com/) / [Laravel](http://laravel.com/)
   * [Less](http://lesscss.org/) / [Sass](http://sass-lang.com/)
   * [Node.js](http://nodejs.org/)
   * [OSX](https://www.apple.com/osx/) / [Ubuntu (server)](http://www.ubuntu.com/server)
+  * [Git](https://github.com/jwellner)
+  * [Wercker](https://www.wercker.com)
+  * [Google Cloud Storage](https://cloud.google.com/storage/)
 
-### Contact
+## Availability
+I am currently *not* available for new projects until **August 2016**.
 
-**Wellner Consultancy B.V.**  
+## Contact me
+
+**Wellner Consultancy BV**  
 Hermelijnvlinderdijk 106  
 3544ZC Utrecht  
 KVK: 55985343 te Utrecht  
-+31(0)644668323  
 
-**Of:**
+**Or:**
 
-  * Mail naar: [jeroen@wllnr.nl](mailto:jeroen@wllnr.nl)
-  * Voeg me toe op [Twitter](http://twitter.com/jwellner)
-  * Bekijk mijn profiel op [LinkedIn](http://www.linkedin.com/in/jeroenwellner)
+  * Mail to: [jeroen@wllnr.nl](mailto:jeroen@wllnr.nl)
+  * Add me on [Twitter](http://twitter.com/jwellner)
+  * Watch my [Github](https://github.com/jwellner) profile
+  * Look at my [LinkedIn](http://www.linkedin.com/in/jeroenwellner) profile

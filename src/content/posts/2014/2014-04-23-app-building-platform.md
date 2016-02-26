@@ -2,6 +2,7 @@
 date: 2014-04-23 11:14:12+00:00
 layout: post.html
 title: App factory using Ionic, AngularJS and Cordova
+slug: app-factory-ionic-angular-cordova
 categories:
 - Nerd stuff
 ---

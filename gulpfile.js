@@ -53,12 +53,12 @@ gulp.task('build.static', function() {
             .use(markdown())
             .use(branch('content/pages/**')
                 .use(permalinks({
-                    pattern: ':title'
+                    pattern: ':slug'
                 }))
             )
             .use(branch('content/posts/**')
                 .use(permalinks({
-                    pattern: 'blog/:date/:title',
+                    pattern: 'blog/:date/:slug',
                     date: 'YYYY/MM'
                 }))
             )

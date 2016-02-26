@@ -1,6 +1,7 @@
 ---
 title: Moved to static website
 date: 2016-02-20
+slug: moved to static website
 layout: post.html
 ---
 
