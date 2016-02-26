@@ -57,7 +57,7 @@ As you can see we use the `GOOGLE_PROJECT_ID` and `GOOGLE_REFRESH_TOKEN` variabl
 ## Push to deploy
 Now push some commits to the master branch and your website build will start. If the build is successful it will be deployed to Google Cloud Storage. 
 
-It is ofcourse good practice to build stuff in a feature branch and when complete and tested merged to the master branch :)
+It is ofcourse good practice to build stuff in a feature branch. When the feature branch is complete and tested merge and push it to master.
 
 # Google Cloud Storage
 I used Amazon AWS services in the past but for this project I tried Google Cloud Storage. It was easy to setup and I really like the Google Cloud Platform console.
