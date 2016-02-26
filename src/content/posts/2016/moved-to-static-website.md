@@ -19,18 +19,15 @@ The build system builds .html pages from a content directory with .md (markdown)
 
 	---
 	title: Moved to static website
+	slug: moved to static website
 	date: 2016-02-20
 	layout: post.html
 	---
 
-The pages are build to static .html files with the pattern `:title`. The blog files are build to static .html files with the pattern `blog/:date/:title`.
+The pages are build to static .html files with the pattern `:slug`. The blog files are build to static .html files with the pattern `blog/:date/:slug`.
 
-### rsync to Google cloud storage
-After the static files are build I can deploy the site with a simple rsync to Google cloud storage. And the result is this super fast snappy website! :)
+I will go more in detail in a next blog post:
 
-I will go more in detail in a next blog post!
-
-.
-
+* Next: [Automatic deployment using wercker](/blog/2016/02/automatic-deployment-using-wrecker/)
 
 
