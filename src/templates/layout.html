@@ -33,7 +33,7 @@
         {% block content %}{% endblock %}
     </section>
     <aside class="col-3 col-12 col-4-desktop">
-        <h3>Laatste blog posts</h3>
+        <h3>Latest posts</h3>
         <ul>
             {% for post in collections.lastPosts %}
             <li><a href="/{{ post.path }}/">{{ post.title }}</a></li>
@@ -42,8 +42,12 @@
     </aside>
 </main>
 <footer role="contentinfo" class="clear">
-    If needed, <a href="https://github.com/jwellner/www.wllnr.nl/issues/new">leave some feedback</a>.
+    <div class="col-8-desktop col-12">
+        If needed, <a href="https://github.com/jwellner/www.wllnr.nl/issues/new">leave some feedback</a>
+    </div>
+    <div class="col-4-desktop col-12">
+        <small class="right-desktop"><a href="https://github.com/jwellner/www.wllnr.nl/blob/master/src/{{ original_filename }}">src/{{ original_filename }}</a></small>
+    </div>
 </footer>
 </body>
 </html>
-<!-- src/{{ original_filename }} -->

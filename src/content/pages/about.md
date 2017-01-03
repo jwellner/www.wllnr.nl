@@ -24,7 +24,7 @@ I love trying new technologies. Below is a list of technologies I currently like
   * [Google Cloud Storage](https://cloud.google.com/storage/)
 
 ## Availability
-I am currently *not* available for new projects until **January 2017**.
+I am currently *not* available for new projects until **April 2017**.
 
 ## Contact me
 
