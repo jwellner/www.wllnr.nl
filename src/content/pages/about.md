@@ -6,7 +6,7 @@ title: About me
 I am Jeroen Wellner, born may 13th 1979, living in Utrecht in The Netherlands. I am a passionate amateur road cyclist ([add me on Strava](https://www.strava.com/athletes/461379)) and web developer.
 
 ## Work
-I make my living as a Freelance (front end) developer at my own consultancy firm Wellner Consultancy BV. With over 20 years experience, I help clients like [Centraal Beheer Achmea](https://www.centraalbeheer.nl), [Agis zorgverzekeringen](http://www.agisweb.nl), [Rijkswaterstaat](http://www.rijkswaterstaat.nl) and many more, to build cool things for the Internet.
+I make my living as a Freelance (front end) developer at my own consultancy firm Wellner Consultancy BV. With over 20 years experience, I help clients like [Centraal Beheer Achmea](https://www.centraalbeheer.nl), [WCC Smart Search & Match](https://www.wcc-group.com/), [Agis zorgverzekeringen](http://www.agisweb.nl), [Rijkswaterstaat](http://www.rijkswaterstaat.nl) and many more, to build cool things for the Internet.
 
 ## Technology stack 
 I love trying new technologies. Below is a list of technologies I currently like to work with (no particular order).
@@ -15,8 +15,8 @@ I love trying new technologies. Below is a list of technologies I currently like
   * [Ionic Framework](http://ionicframework.com/)
   * [Cordova](http://cordova.apache.org)
   * [Gulp](http://gulpjs.com/)
-  * [Slim](http://www.slimframework.com/) / [Laravel](http://laravel.com/)
-  * [Less](http://lesscss.org/) / [Sass](http://sass-lang.com/)
+  * [Laravel](http://laravel.com/) / [Slim](http://www.slimframework.com/)
+  * [Sass](http://sass-lang.com/) / [Less](http://lesscss.org/)
   * [Node.js](http://nodejs.org/)
   * [OSX](https://www.apple.com/osx/) / [Ubuntu (server)](http://www.ubuntu.com/server)
   * [Git](https://github.com/jwellner)
@@ -24,7 +24,7 @@ I love trying new technologies. Below is a list of technologies I currently like
   * [Google Cloud Storage](https://cloud.google.com/storage/)
 
 ## Availability
-I am currently *not* available for new projects until **April 2017**.
+I am currently *not* available for new projects until **July 2017**.
 
 ## Contact me
 
