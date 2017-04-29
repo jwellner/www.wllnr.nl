@@ -5,7 +5,7 @@ slug: From OSX to Windows 10 with WSL
 layout: post.html
 ---
 
-My Macbook Pro 13" has a [screen coating issue](http://www.macworld.com/article/2994479/macbook/report-apple-will-replace-retina-macbook-pro-screens-with-bad-coating.html) and I have to get it replaced at a service center. I need a laptop for work, so I took this as an opportunity to check out alternatives for my Mac.
+My Macbook Pro 13" has a [screen coating issue](http://www.macworld.com/article/2994479/macbook/report-apple-will-replace-retina-macbook-pro-screens-with-bad-coating.html) and I have to get it replaced at a service center. I need a laptop for work. So I took this as an opportunity to check out alternatives for my Mac.
 
 I have been a Mac user for the past ~10 years. I love the Mac for development. But with the latest 
 disappointing Macbook updates I started to look around. 
