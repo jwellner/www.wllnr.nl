@@ -1,5 +1,5 @@
 ---
-title: From OSX to Windows 10 with WSL
+title: Moving from OSX to Windows 10 with WSL
 date: 2017-04-29
 slug: From OSX to Windows 10 with WSL
 layout: post.html
