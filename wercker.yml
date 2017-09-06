@@ -20,3 +20,10 @@ deploy:
         project: $GOOGLE_PROJECT_ID
         token: $GOOGLE_REFRESH_TOKEN
         dir: build
+
+deploy-firebase:
+  steps:
+    - devillex/firebase-deploy@1.1.0:
+        project: $FIREBASE_PROJECT
+        token: $FIREBASE_TOKEN
+        message: "Wercker deploy"
