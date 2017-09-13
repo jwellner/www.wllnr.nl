@@ -1,3 +1,10 @@
+---
+title: Github pages custom domain HTTPS
+date: 2017-09-12
+slug: Github pages custom domain HTTPS
+layout: post.html
+---
+
 This post explains howto:
 
 - Deploy to github pages
