@@ -1,7 +1,7 @@
 ---
-title: Github pages custom domain HTTPS
+title: Deploy to Github Pages with custom domain + HTTPS
 date: 2017-09-12
-slug: Github pages custom domain HTTPS
+slug: Github Pages custom domain HTTPS
 layout: post.html
 ---
 
