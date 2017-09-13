@@ -7,9 +7,9 @@ layout: post.html
 
 This post explains howto:
 
-- Deploy to github pages
-- Use a custom domain
-- Setup HTTPS using CloudFlare
+- [Deploy to github pages](#deploy-to-github-pages)
+- [Use a custom domain](#use-a-custom-domain)
+- [Setup HTTPS using CloudFlare](#setup-https-using-cloudflare)
 
 ## Deploy to github pages
 
