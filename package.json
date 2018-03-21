@@ -32,7 +32,6 @@
   "license": "CC0 1.0 Universal",
   "dependencies": {
     "jstransformer-swig": "^1.0.0",
-    "node-sass": "^4.7.2",
     "npm": "^5.7.1"
   }
 }
