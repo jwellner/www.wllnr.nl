@@ -8,7 +8,7 @@ build:
     - script:
         name: prebuild
         code: |
-          echo "npm run-script prebuild"
+          npm run-script prebuild
 
     - hgen/gulp:
         tasks: build
