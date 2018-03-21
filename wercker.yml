@@ -7,8 +7,8 @@ build:
 
     - script:
         name: prebuild
-				code: |
-					chmod -R 777 /pipeline/source/node_modules
+        code: |
+          chmod -R 777 /pipeline/source/node_modules
           npm rebuild node-sass
 
     - hgen/gulp:
