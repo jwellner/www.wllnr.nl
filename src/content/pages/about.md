@@ -6,11 +6,11 @@ title: About me
 I am Jeroen Wellner, born may 13th 1979, living in Utrecht in The Netherlands. I am a passionate amateur road cyclist ([add me on Strava](https://www.strava.com/athletes/461379)) and web developer.
 
 ## Work
-I make my living as a Freelance (front end) developer at my own consultancy firm Wellner Consultancy BV. With over 20 years experience, I help clients like [Centraal Beheer Achmea](https://www.centraalbeheer.nl), [WCC Smart Search & Match](https://www.wcc-group.com/), [Agis zorgverzekeringen](http://www.agisweb.nl), [Rijkswaterstaat](http://www.rijkswaterstaat.nl) and many more, to build cool things for the Internet.
+I make my living as a Freelance Web Developer at my own consultancy firm Wellner Consultancy. With over 20 years experience, I help clients like [Centraal Beheer Achmea](https://www.centraalbeheer.nl), [WCC Smart Search & Match](https://www.wcc-group.com/), [Agis zorgverzekeringen](http://www.agisweb.nl), [Rijkswaterstaat](http://www.rijkswaterstaat.nl) and many more, to build cool things for the Internet.
 
-## Technology stack 
+## Technology stack
 I love trying new technologies. Below is a list of technologies I currently like to work with (no particular order).
-	
+
   * [AngularJS](https://angularjs.org/)
   * [Ionic Framework](http://ionicframework.com/)
   * [Cordova](http://cordova.apache.org)
@@ -24,14 +24,14 @@ I love trying new technologies. Below is a list of technologies I currently like
   * [Google Cloud Storage](https://cloud.google.com/storage/)
 
 ## Availability
-I am currently *not* available for new projects until **September 2017**.
+I am currently available for **remote** projects.
 
 ## Contact me
 
-**Wellner Consultancy BV**  
-Hermelijnvlinderdijk 106  
-3544ZC Utrecht  
-KVK: 55985343 te Utrecht  
+**Wellner Consultancy**
+Hermelijnvlinderdijk 106
+3544ZC Utrecht
+KVK: 55985343 te Utrecht
 
 **Or:**
 

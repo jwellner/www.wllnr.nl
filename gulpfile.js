@@ -14,7 +14,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     prefix = require('gulp-autoprefixer');
-    
+
 
 gulp.task('clean', function() {
     return gulp.src(['./build/*'])
@@ -24,7 +24,7 @@ gulp.task('clean', function() {
 gulp.task('build.static', function() {
     return gulp.src("./src/**/*.md")
         .pipe(gulp_front_matter()).on("data", function(file) {
-            assign(file, file.frontMatter); 
+            assign(file, file.frontMatter);
             delete file.frontMatter;
         })
         .pipe(
@@ -74,7 +74,7 @@ gulp.task('build.static', function() {
 });
 
 gulp.task('build.css', function () {
-    return gulp.src('./src/scss/main.scss')
+    return gulp.src(['./src/scss/main.scss'])
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(prefix("last 2 versions"))
