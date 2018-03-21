@@ -3,6 +3,8 @@ box: devillex/docker-firebase
 build:
   steps:
     - npm-install
+		- npm-rebuild:
+				package: node-sass
     - npm-test
 
     - hgen/gulp:
