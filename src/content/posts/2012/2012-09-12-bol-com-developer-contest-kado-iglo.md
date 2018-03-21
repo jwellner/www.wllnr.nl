@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2012-09-12 13:04:28+00:00
-layout: post.html
+layout: post.swig
 slug: bol-com-developer-contest-kado-iglo
 title: 'Bol.com developer contest: Kado Iglo'
 wordpress_id: 426

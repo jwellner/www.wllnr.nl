@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2009-08-03 21:01:09+00:00
-layout: post.html
+layout: post.swig
 slug: cakephp-deployment-keep-one-config
 title: 'CakePHP deployment: keep one config'
 wordpress_id: 122

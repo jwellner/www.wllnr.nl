@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2008-11-23 20:26:04+00:00
-layout: post.html
+layout: post.swig
 slug: webkit-css-transformation-and-radius
 title: 'Webkit css: transformation and radius'
 wordpress_id: 77
@@ -19,8 +19,8 @@ Today i changed my layout a little. I came around some webkit only css functions
 
 In my menu i've added :Â 
 
-    
-    
+
+
     .menu a {
       -webkit-transition: -webkit-transform 0.2s ease-out;
     }
@@ -28,7 +28,7 @@ In my menu i've added :Â 
       color: #9ED728;
       -webkit-transform: scale(1.2);
     }
-    
+
 
 
 
@@ -37,13 +37,13 @@ Check my menu for the result!
 I also added some rounded corners on the date box. This will work for Mozilla and Webkit browsers:
 
 
-    
-    
+
+
     dl.date {
     	-moz-border-radius:10px;
     	-webkit-border-radius: 10px;
     }
-    
+
 
 
 

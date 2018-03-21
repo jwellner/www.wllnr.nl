@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2011-05-12 19:18:27+00:00
-layout: post.html
+layout: post.swig
 slug: phonegap-iphone-xuijs-html-failing-occassionaly-2
 title: PhoneGap + iPhone + xuijs .html() failing occassionaly
 wordpress_id: 352
@@ -38,10 +38,10 @@ For the time being i'm using the following solutions:
 
 
 
-	
+
   * When I only need to set text I use the **.innerText** property to set the text.
 
-	
+
   * When I need to add HTML I create **new DOM elements** and add it to the DOM.
 
 
@@ -52,13 +52,13 @@ For the time being i'm using the following solutions:
 
 **problem**
 
-    
+
     x$('#someul').html("bottom","<li>With text</li>");
 
 
 **solution**
 
-    
+
     var li = document.createElement("li");
     li.innerText = "With text";
     x$("#someul").html("bottom",li);
@@ -66,13 +66,13 @@ For the time being i'm using the following solutions:
 
 **problem**
 
-    
+
     x$("#somediv").html("Talk the talk");
 
 
 **solution**
 
-    
+
     x$("#someul")[0].innerText = "Talk the talk";
 
 

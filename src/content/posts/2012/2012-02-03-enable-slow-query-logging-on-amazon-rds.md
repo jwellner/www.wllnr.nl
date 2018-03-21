@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2012-02-03 14:38:04+00:00
-layout: post.html
+layout: post.swig
 slug: enable-slow-query-logging-on-amazon-rds
 title: Enable slow query logging on Amazon RDS
 wordpress_id: 408

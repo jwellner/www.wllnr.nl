@@ -1,6 +1,6 @@
 ---
 title: Home
-layout: home.html
+layout: home.swig
 ---
 
 {% block col1 %}

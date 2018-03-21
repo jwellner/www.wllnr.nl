@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2007-11-14 10:13:53+00:00
-layout: post.html
+layout: post.swig
 slug: luchtfoto
 title: Luchtfoto
 wordpress_id: 33

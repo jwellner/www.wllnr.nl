@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2010-02-23 13:04:05+00:00
-layout: post.html
+layout: post.swig
 slug: iphone-core-data-explained
 title: 'iPhone: Core Data explained'
 wordpress_id: 162

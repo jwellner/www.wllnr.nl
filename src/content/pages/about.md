@@ -1,5 +1,5 @@
 ---
-layout: page.html
+layout: page.swig
 slug: about
 title: About me
 ---

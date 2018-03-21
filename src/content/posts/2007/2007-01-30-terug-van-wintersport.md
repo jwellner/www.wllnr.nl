@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2007-01-30 17:04:33+00:00
-layout: post.html
+layout: post.swig
 slug: terug-van-wintersport
 title: Terug van wintersport!
 wordpress_id: 17

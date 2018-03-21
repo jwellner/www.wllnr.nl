@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2013-12-04 10:34:03+00:00
-layout: post.html
+layout: post.swig
 slug: nginx-node-js-unix-socket-and-socket-io
 title: Nginx Node.js unix socket and socket.io
 wordpress_id: 499
@@ -15,8 +15,8 @@ A couple of months ago I started developing a realtime sales dashboard for our b
 This article is a reminder to myself how I setup the production environment. The first thing you need to know is that Websocket proxying is supported in Nginx since version 1.3.13. The following configuration is needed to proxy websockets, inside your server block you need to put the following configuration:
 
 
-    
-    
+
+
     location / {
             proxy_pass http://upstream;
             proxy_http_version 1.1;
@@ -24,41 +24,41 @@ This article is a reminder to myself how I setup the production environment. The
             proxy_set_header Connection "upgrade";
             proxy_set_header Host $host;
     }
-    
 
 
 
-When you proxy Websockets you have to use HTTP 1.1 because it uses the Upgrade header that is only available in version 1.1. 
+
+When you proxy Websockets you have to use HTTP 1.1 because it uses the Upgrade header that is only available in version 1.1.
 
 The upstream block is configured outside your server block. Here I have configured my unix socket.
 
 
-    
-    
+
+
     upstream upstream {
             server unix:/tmp/node_realtimedashboard.sock;
     }
-    
+
 
 
 
 My complete configuration can be found below.
 
 
-    
-    
+
+
     upstream realtimedashboard {
             server unix:/tmp/node_realtimedashboard.sock;
     }
-    
+
     server {
             listen 80;
-    
+
             server_name realtimedashboard.somedomain.com;
-    
+
             access_log /var/log/nginx/realtimedashboard-access.log;
             error_log /var/log/nginx/realtimedashboard-error_log;
-    
+
             location / {
                     proxy_pass http://realtimedashboard;
                     proxy_http_version 1.1;
@@ -66,9 +66,9 @@ My complete configuration can be found below.
                     proxy_set_header Connection "upgrade";
                     proxy_set_header Host $host;
             }
-    
+
     }
-    
+
 
 
 

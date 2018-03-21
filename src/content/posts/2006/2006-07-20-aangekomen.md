@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2006-07-20 11:35:07+00:00
-layout: post.html
+layout: post.swig
 slug: aangekomen
 title: Aangekomen
 wordpress_id: 5

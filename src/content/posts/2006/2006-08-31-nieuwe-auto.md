@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2006-08-31 19:38:02+00:00
-layout: post.html
+layout: post.swig
 slug: nieuwe-auto
 title: Nieuwe Auto!
 wordpress_id: 13

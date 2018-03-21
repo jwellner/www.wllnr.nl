@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2007-01-04 20:46:02+00:00
-layout: post.html
+layout: post.swig
 slug: snowboard
 title: Snowboard
 wordpress_id: 16

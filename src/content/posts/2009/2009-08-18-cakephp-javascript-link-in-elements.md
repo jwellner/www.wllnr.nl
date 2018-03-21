@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2009-08-18 20:30:36+00:00
-layout: post.html
+layout: post.swig
 slug: cakephp-javascript-link-in-elements
 title: CakePHP javascript->link in elements
 wordpress_id: 132
@@ -27,17 +27,17 @@ I think the CakePHP team will find some solution for this. Before that you can u
 
 <blockquote>
 
-> 
-> 
+>
+>
 
 You can get around this problem by manually recreating scripts_for_layout. Remove $scripts_for_layout from your view and replace it with this...
 
->     
+>
 >     echo join("\n\t", $this->__scripts);
-> 
-> 
+>
+>
 
-> 
+>
 > </blockquote>
 
 

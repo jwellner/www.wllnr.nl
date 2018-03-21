@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2009-04-05 17:44:27+00:00
-layout: post.html
+layout: post.swig
 slug: 14-usefull-web-design-cheat-sheets
 title: 14 usefull web design cheat sheets
 wordpress_id: 115

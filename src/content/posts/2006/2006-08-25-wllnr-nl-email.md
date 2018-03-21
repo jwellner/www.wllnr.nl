@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2006-08-25 12:56:34+00:00
-layout: post.html
+layout: post.swig
 slug: wllnr-nl-email
 title: wllnr.nl email!
 wordpress_id: 11

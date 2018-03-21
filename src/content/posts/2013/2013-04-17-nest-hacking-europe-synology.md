@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2013-04-17 16:19:49+00:00
-layout: post.html
+layout: post.swig
 slug: nest-hacking-europe-synology
 title: Nest Hack with Synology NAS
 wordpress_id: 450
@@ -22,7 +22,7 @@ In this blog post I will explain how I got it working using my **Synology NAS**.
 The first step is to enable your own DNS server. On my NAS I use Dnsmasq. Dnsmasq is a lightweight DNS server. I installed it using the package manager [ipkg](http://forum.synology.com/wiki/index.php/Overview_on_modifying_the_Synology_Server,_bootstrap,_ipkg_etc#Installing_compiled.2Fbinary_programs_using_ipkg).
 
 
-    
+
     ipkg install dnsmasq
 
 
@@ -31,7 +31,7 @@ By default it will use your providers DSN servers in /etc/resolv.conf to forward
 
 Start dnsmasq:
 
-    
+
     /opt/etc/init.d/S56dnsmasq
 
 
@@ -41,7 +41,7 @@ Now create a new website with a custom config. This can be done by placing a hos
 I put mine in **/usr/syno/etc/sites-enabled-user/www.wunderground.com.conf** with the following content:
 
 
-    
+
     LoadModule proxy_module modules/mod_proxy.so
     LoadModule proxy_http_module modules/mod_proxy_http.so
     ProxyRequests Off
@@ -51,7 +51,7 @@ I put mine in **/usr/syno/etc/sites-enabled-user/www.wunderground.com.conf** wit
     ProxyPass /auto/nestlabs/geo/current/i !
     ProxyPass /sniff.php !
     ProxyPass / http://38.102.136.104/
-    
+
 
 
 
@@ -60,8 +60,8 @@ For the virtualhost www.wunderground.com we proxy everything to the original IP 
 Now create the website folder **/var/services/web/wunderground.com** on your NAS (on my NAS it is linked to a share /web). In this folder we put a file sniff.php with the following content:
 
 
-    
-    
+
+
     $param = $_GET["query"];
     if ($param == "28806") {
             $jsonData = json_decode(file_get_contents('http://38.102.136.104/auto/nestlabs/geo/current/i?query=Utrecht'), true);
@@ -78,7 +78,7 @@ Now create the website folder **/var/services/web/wunderground.com** on your NAS
     }
     header('Content-Type: application/json');
     print stripslashes(json_encode($jsonData));
-    
+
 
 
 
@@ -86,17 +86,17 @@ Utrecht is the city where I live. This should be replaced with your own city.
 
 Also add the file .htaccess with the following content:
 
-    
-    
+
+
     RewriteEngine On
     RewriteRule ^auto/nestlabs/geo/current/i$ sniff.php [QSA]
-    
+
 
 
 
 Restart apache:
 
-    
+
     /usr/syno/etc/rc.d/S97apache-user.sh restart
 
 

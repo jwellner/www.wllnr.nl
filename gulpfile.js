@@ -13,7 +13,7 @@ var gulp = require('gulp'),
     webserver = require('gulp-webserver'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
-    prefix = require('gulp-autoprefixer');
+	prefix = require('gulp-autoprefixer');
 
 
 gulp.task('clean', function() {
@@ -63,7 +63,7 @@ gulp.task('build.static', function() {
                 }))
             )
             .use(layouts({
-                engine: 'swig',
+				default: 'post.swig',
                 directory: 'src/templates'
             }))
             .use(blc({

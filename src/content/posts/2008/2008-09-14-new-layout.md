@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2008-09-14 16:45:26+00:00
-layout: post.html
+layout: post.swig
 slug: new-layout
 title: New layout
 wordpress_id: 50

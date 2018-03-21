@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2006-10-30 10:47:30+00:00
-layout: post.html
+layout: post.swig
 slug: pc-aanzetten-op-afstand
 title: PC aanzetten op afstand
 wordpress_id: 15

@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2006-08-01 06:46:56+00:00
-layout: post.html
+layout: post.swig
 slug: terug-in-bangkok
 title: Terug in Bangkok
 wordpress_id: 9

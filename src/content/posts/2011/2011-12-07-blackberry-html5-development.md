@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2011-12-07 18:18:28+00:00
-layout: post.html
+layout: post.swig
 slug: blackberry-html5-development
 title: BlackBerry HTML5 App development
 wordpress_id: 385

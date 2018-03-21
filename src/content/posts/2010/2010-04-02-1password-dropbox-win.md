@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2010-04-02 08:25:46+00:00
-layout: post.html
+layout: post.swig
 slug: 1password-dropbox-win
 title: 1password + dropbox = win
 wordpress_id: 166

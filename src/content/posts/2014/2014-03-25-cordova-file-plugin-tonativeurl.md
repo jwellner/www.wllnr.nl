@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2014-03-25 21:36:00+00:00
-layout: post.html
+layout: post.swig
 slug: cordova-file-plugin-tonativeurl
 title: Cordova file plugin toNativeURL
 wordpress_id: 505

@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2008-02-06 12:15:14+00:00
-layout: post.html
+layout: post.swig
 slug: ruwe-1e-verdiepingsvloer
 title: Ruwe 1e verdiepingsvloer
 wordpress_id: 35

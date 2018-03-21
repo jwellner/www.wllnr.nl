@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2007-04-24 06:54:37+00:00
-layout: post.html
+layout: post.swig
 slug: toch-geen-kat
 title: Toch geen kat
 wordpress_id: 24

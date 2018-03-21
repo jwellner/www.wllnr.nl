@@ -2,13 +2,13 @@
 title: Moving from OSX to Windows 10 with WSL
 date: 2017-04-29
 slug: From OSX to Windows 10 with WSL
-layout: post.html
+layout: post.swig
 ---
 
 My Macbook Pro 13" has a [screen coating issue](http://www.macworld.com/article/2994479/macbook/report-apple-will-replace-retina-macbook-pro-screens-with-bad-coating.html) and I have to get it replaced at a service center. I need a laptop for work. So I took this as an opportunity to check out alternatives for my Mac.
 
-I have been a Mac user for the past ~10 years. I love the Mac for development. But with the latest 
-disappointing Macbook updates I started to look around. 
+I have been a Mac user for the past ~10 years. I love the Mac for development. But with the latest
+disappointing Macbook updates I started to look around.
 
 Windows 10 has improved tremendously (I have worked with Windows 10 at clients). Last year Microsoft introduced the [Windows Subsystem for Linux (WSL)](https://insights.ubuntu.com/2016/03/30/ubuntu-on-windows-the-ubuntu-userspace-for-windows-developers/). Bash on Windows runs Ubuntu user-mode binaries provided by Canonical. This means the command-line utilities are the same as those that run within a native Ubuntu environment.
 
@@ -17,7 +17,7 @@ The Windows 10 Creators Update seems to [resolve a lot of issues](https://blogs.
 
 Currently I mainly do front-end development and use nodejs. On my Mac I already switched from Webstorm to Vscode. I also do some PHP development which shouldn't be an issue with all available Ubuntu packages.
 
-So yesterday I ordered the [Asus Zenbook BX410UA](https://www.asus.com/Notebooks/ASUS-ZenBook-UX410UA/), received it today and currently setting it up as my main development machine for next week. Lets see if it works out! Below is my installation log for future references. 
+So yesterday I ordered the [Asus Zenbook BX410UA](https://www.asus.com/Notebooks/ASUS-ZenBook-UX410UA/), received it today and currently setting it up as my main development machine for next week. Lets see if it works out! Below is my installation log for future references.
 
 ## Setup
 
@@ -27,7 +27,7 @@ Update Windows 10 with all the latest update. And make sure you get the Window 1
 
 ### Turn on Developer mode
 
-- Go to ***Settings -> Update and Security -> For Developers*** 
+- Go to ***Settings -> Update and Security -> For Developers***
 - Select the ***Developer mode*** radio button.
 
 ### Enable Windows Subsystem for Linux

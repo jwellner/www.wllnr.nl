@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2010-02-14 09:15:06+00:00
-layout: post.html
+layout: post.swig
 slug: stanford-iphone-development-course
 title: Stanford iPhone development course
 wordpress_id: 150
@@ -18,10 +18,10 @@ tags:
 
 
 
-	
+
   * Course materials on [Stanford's website](http://www.stanford.edu/class/cs193p/)
 
-	
+
   * Video's on [iTunes U](http://deimos.apple.com/WebObjects/Core.woa/Browsev2/itunes.stanford.edu)
 
 

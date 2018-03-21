@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2011-01-04 09:02:14+00:00
-layout: post.html
+layout: post.swig
 slug: cakephp-rest-plugin
 title: CakePHP REST Plugin
 wordpress_id: 324
@@ -16,10 +16,10 @@ Kevin van Zonneveld created a great reusable [CakePHP REST plugin](http://kevin.
 
 <!-- more -->
 
-View presentation on [slideshare](http://www.slideshare.net/kevinvz/rest-presentation-2901872)  
-  
+View presentation on [slideshare](http://www.slideshare.net/kevinvz/rest-presentation-2901872)
 
 
-And here's the [source & documentation on github](http://github.com/kvz/cakephp-rest-plugin)  
-  
+
+And here's the [source & documentation on github](http://github.com/kvz/cakephp-rest-plugin)
+
 

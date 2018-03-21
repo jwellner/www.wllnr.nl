@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2007-04-19 14:14:20+00:00
-layout: post.html
+layout: post.swig
 slug: ubuntu-704-released
 title: Ubuntu 7.04 released
 wordpress_id: 21

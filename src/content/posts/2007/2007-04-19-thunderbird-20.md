@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2007-04-19 14:30:40+00:00
-layout: post.html
+layout: post.swig
 slug: thunderbird-20
 title: Thunderbird 2.0
 wordpress_id: 22

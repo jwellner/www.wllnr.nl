@@ -1,6 +1,6 @@
 ---
 date: 2014-04-23 11:14:12+00:00
-layout: post.html
+layout: post.swig
 title: App factory using Ionic, AngularJS and Cordova
 slug: app-factory-ionic-angular-cordova
 categories:
@@ -30,7 +30,7 @@ Screenshots (from my browser) of the Indianapolis Mini-Marathon App.
 ### AppStore links
 
 Some links to App's build with the "App Factory".
-	
+
 * [500 Festival Mini Marathon](https://play.google.com/store/apps/details?id=com.xacte.eventapp.indymini) (Android)
 * [500 Festival Mini-Marathon](https://itunes.apple.com/nl/app/oneamerica-500-festival-mini/id860841885?mt=8) (iOS)
 * [Marine Corp Historic Half](https://play.google.com/store/apps/details?id=com.xacte.eventapp.mchh) (Android)

@@ -1,5 +1,5 @@
 ---
 title: Blog
 slug: blog
-layout: blog.html
+layout: blog.swig
 ---

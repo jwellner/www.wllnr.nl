@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2009-07-09 20:56:36+00:00
-layout: post.html
+layout: post.swig
 slug: using-gmail-for-outbound-smtp-on-mac-os-x
 title: Using gmail for outbound smtp on Mac OS X
 wordpress_id: 117

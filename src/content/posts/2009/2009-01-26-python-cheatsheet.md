@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2009-01-26 19:24:36+00:00
-layout: post.html
+layout: post.swig
 slug: python-cheatsheet
 title: Python cheatsheet
 wordpress_id: 93

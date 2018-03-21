@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2010-07-23 17:48:37+00:00
-layout: post.html
+layout: post.swig
 slug: in-de-iphone-appstore-vakantie-ehbo-gids
 title: 'In de iPhone AppStore: Vakantie EHBO Gids'
 wordpress_id: 196

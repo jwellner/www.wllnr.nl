@@ -1,7 +1,7 @@
 ---
 title: Projects
 slug: projects
-layout: page.html
+layout: page.swig
 ---
 
 I build a lot of cool stuff for clients but I also like to experiment in my spare time.

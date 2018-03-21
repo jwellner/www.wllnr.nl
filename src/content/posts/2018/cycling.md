@@ -2,7 +2,7 @@
 title: Granfondo Cycling Team
 date: 2018-03-21
 slug: Granfondo Cycling Team
-layout: post.html
+layout: post.swig
 ---
 
 In this blog you will read about my other passion: riding my roadbike.

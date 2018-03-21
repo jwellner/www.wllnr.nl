@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2008-09-20 20:00:03+00:00
-layout: post.html
+layout: post.swig
 slug: iphone-sqlite-example
 title: iPhone + sqlite example
 wordpress_id: 59

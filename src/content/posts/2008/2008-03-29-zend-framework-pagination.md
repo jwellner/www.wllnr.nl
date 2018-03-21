@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2008-03-29 13:05:42+00:00
-layout: post.html
+layout: post.swig
 slug: zend-framework-pagination
 title: Zend Framework Pagination
 wordpress_id: 37

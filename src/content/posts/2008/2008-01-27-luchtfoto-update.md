@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2008-01-27 15:15:42+00:00
-layout: post.html
+layout: post.swig
 slug: luchtfoto-update
 title: Luchtfoto (update)
 wordpress_id: 34

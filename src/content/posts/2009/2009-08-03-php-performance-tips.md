@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2009-08-03 10:05:30+00:00
-layout: post.html
+layout: post.swig
 slug: php-performance-tips
 title: PHP performance tips
 wordpress_id: 119

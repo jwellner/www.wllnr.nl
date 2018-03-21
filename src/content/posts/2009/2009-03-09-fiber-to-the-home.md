@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2009-03-09 20:42:42+00:00
-layout: post.html
+layout: post.swig
 slug: fiber-to-the-home
 title: Fiber to the home?
 wordpress_id: 104

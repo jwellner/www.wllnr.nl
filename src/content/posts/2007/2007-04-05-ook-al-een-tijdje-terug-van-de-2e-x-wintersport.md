@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2007-04-05 14:45:51+00:00
-layout: post.html
+layout: post.swig
 slug: ook-al-een-tijdje-terug-van-de-2e-x-wintersport
 title: Terug van wintersport (2.0)
 wordpress_id: 19

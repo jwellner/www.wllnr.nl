@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2007-05-31 10:22:13+00:00
-layout: post.html
+layout: post.swig
 slug: symfony-framework
 title: symfony framework
 wordpress_id: 26

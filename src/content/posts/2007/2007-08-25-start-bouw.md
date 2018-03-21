@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2007-08-25 18:45:08+00:00
-layout: post.html
+layout: post.swig
 slug: start-bouw
 title: Start bouw
 wordpress_id: 28

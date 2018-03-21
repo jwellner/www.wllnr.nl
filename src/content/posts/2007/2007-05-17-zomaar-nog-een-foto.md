@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2007-05-17 11:07:58+00:00
-layout: post.html
+layout: post.swig
 slug: zomaar-nog-een-foto
 title: Zomaar nog een foto
 wordpress_id: 25

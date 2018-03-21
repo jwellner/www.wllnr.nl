@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2006-08-10 10:02:34+00:00
-layout: post.html
+layout: post.swig
 slug: nederland
 title: Nederland
 wordpress_id: 10

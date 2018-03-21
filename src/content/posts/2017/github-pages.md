@@ -2,7 +2,7 @@
 title: Deploy to Github Pages with custom domain + HTTPS
 date: 2017-09-13
 slug: Github Pages custom domain HTTPS
-layout: post.html
+layout: post.swig
 ---
 
 This post explains howto:

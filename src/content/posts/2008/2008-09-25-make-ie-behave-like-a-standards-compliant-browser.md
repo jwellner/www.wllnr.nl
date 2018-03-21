@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2008-09-25 19:41:16+00:00
-layout: post.html
+layout: post.swig
 slug: make-ie-behave-like-a-standards-compliant-browser
 title: Make IE behave like a standards-compliant browser
 wordpress_id: 61

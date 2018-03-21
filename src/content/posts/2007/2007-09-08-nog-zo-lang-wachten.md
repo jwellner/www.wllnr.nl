@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2007-09-08 13:12:38+00:00
-layout: post.html
+layout: post.swig
 slug: nog-zo-lang-wachten
 title: Zo lang wachten...
 wordpress_id: 30

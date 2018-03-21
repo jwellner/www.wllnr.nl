@@ -2,7 +2,7 @@
 author: admin
 comments: true
 date: 2008-06-28 14:11:21+00:00
-layout: post.html
+layout: post.swig
 slug: javascript-and-css-minify-for-php
 title: javascript and css minify for PHP
 wordpress_id: 38
@@ -30,25 +30,25 @@ The component PHP classes can also be used in other projects to minify content, 
 
 
 
-	
+
   * Combines and minifies multiple CSS or JavaScript files into a single download on the fly
 
-	
+
   * Uses a PHP implementation of Douglas Crockford's excellent JSMin library for JavaScript minification and custom classes to minify CSS and HTML
 
-	
+
   * Caches server-side to avoid doing unnecessary work
 
-	
+
   * Responds with an HTTP 304 (Not Modified) response when the browser already has the requested content in its cache
 
-	
+
   * Most modules are lazy-loaded as needed (304 responses use minimal code)
 
-	
+
   * Automatically rewrites relative URLs in combined CSS files to point to valid locations
 
-	
+
   * And [more](http://code.google.com/p/minify/) ....
 
 
