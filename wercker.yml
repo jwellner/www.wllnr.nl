@@ -4,7 +4,8 @@ build:
   steps:
     - npm-install
 		- npm-rebuild:
-				package: node-sass
+			package: node-sass
+
     - npm-test
 
     - hgen/gulp:
