@@ -8,7 +8,7 @@ build:
     - script:
         name: prebuild
         code: |
-          npm run-script prebuild
+          npm rebuild node-sass
 
     - hgen/gulp:
         tasks: build
