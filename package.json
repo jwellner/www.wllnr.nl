@@ -14,6 +14,7 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-webserver": "^0.9.1",
     "gulpsmith": "^0.6.0",
+    "jstransformer-swig": "^1.0.0",
     "lodash": "^4.17.5",
     "lodash.assign": "^4.2.0",
     "metalsmith": "^2.1.0",
@@ -26,14 +27,11 @@
     "rebuild-node-sass": "^1.1.0"
   },
   "scripts": {
-		"prebuild": "rebuild-node-sass",
+    "prebuild": "rebuild-node-sass",
     "test": "echo \"Error: no test specified\" && exit 0",
     "deploy": "gsutil -m rsync -r -d build/ gs://www.wllnr.nl"
   },
   "author": "Jeroen Wellner",
   "license": "CC0 1.0 Universal",
-  "dependencies": {
-    "jstransformer-swig": "^1.0.0",
-    "npm": "^5.7.1"
-  }
+  "dependencies": {}
 }
