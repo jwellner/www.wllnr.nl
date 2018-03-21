@@ -3,12 +3,12 @@ box: devillex/docker-firebase
 build:
   steps:
     - npm-install
-		- npm-test
+    - npm-test
 
-		- script:
-				name: prebuild
-				code: |
-					echo "npm run-script prebuild"
+    - script:
+        name: prebuild
+        code: |
+          echo "npm run-script prebuild"
 
     - hgen/gulp:
         tasks: build
