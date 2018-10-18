@@ -7,6 +7,7 @@ build:
         code: |
           chown -R root $WERCKER_ROOT
           chmod -R 777 $WERCKER_ROOT
+          mkdir -p /pipeline/source/node_modules/node-sass/vendor
 
     - npm-install
     - npm-test
