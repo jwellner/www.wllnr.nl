@@ -2,11 +2,6 @@ box: devillex/docker-firebase
 
 build:
   steps:
-    - script:
-        name: prebuild
-        code: |
-          chmod -R 777 /pipeline/source
-
     - npm-install
     - npm-test
 

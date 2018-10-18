@@ -23,7 +23,6 @@
     "metalsmith-layouts": "^2.2.0",
     "metalsmith-markdown": "^1.0.1",
     "metalsmith-permalinks": "^1.0.0",
-    "node-sass": "^4.9.4",
     "normalize-scss": "^7.0.1",
     "rebuild-node-sass": "^1.1.0"
   },

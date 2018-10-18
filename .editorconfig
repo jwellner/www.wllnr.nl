@@ -1,0 +1,8 @@
+[*.js]
+indent_style = space
+indent_size = 4
+
+
+[*.{json,html,scss,yml}]
+indent_style = space
+indent_size = 2
