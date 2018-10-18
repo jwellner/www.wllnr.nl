@@ -2,8 +2,13 @@ box: devillex/docker-firebase
 
 build:
   steps:
-    - npm-install:
-        use-cache: false
+    - script:
+        name: chmod
+        code: |
+          chown -R root $WERCKER_ROOT
+          chmod -R 777 $WERCKER_ROOT
+
+    - npm-install
     - npm-test
 
     - hgen/gulp:
