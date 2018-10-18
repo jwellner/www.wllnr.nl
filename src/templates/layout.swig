@@ -11,42 +11,44 @@
     <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 
     {% block head %}
-    <link rel="stylesheet" href="/css/main.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/css/index.css" type="text/css" media="all">
     {% endblock %}
 </head>
-<body>
-<header role="banner" class="clear no-padding-tablet no-padding-tablet">
-    <div class="logo col-6-tablet col-8-desktop col-12">
-        <h1><a href="/">Jeroen Wellner</a></h1>
-        <p>Mobile &amp; Web Development</p>
+<body class="page">
+<header class="header">
+    <div class="header__title-container">
+      <h1 class="header__title"><a href="/" class="header__title-link">Jeroen Wellner</a></h1>
+      <p class="header__tagline">Mobile &amp; Web Development</p>
     </div>
-    <nav role="navigation" class="col-6-tablet col-4-desktop col-12 no-padding-tablet">
-        <ul>
-            <li><a href="/about/">About me</a></li>
-            <li><a href="/projects/">Projects</a></li>
-            <li><a href="/blog/">Blog</a></li>
+    <nav class="header__navigation-container">
+        <ul class="navigation">
+            <li class="navigation__item"><a href="/about/" class="navigation__item-link">About me</a></li>
+            <li class="navigation__item"><a href="/projects/" class="navigation__item-link">Projects</a></li>
+            <li class="navigation__item"><a href="/blog/" class="navigation__item-link">Blog</a></li>
         </ul>
     </nav>
 </header>
-<main role="main" class="clear">
-    <section class="content col-12 col-8-desktop">
-        {% block content %}{% endblock %}
+<main class="main">
+    <section class="main__content">
+      {% block content %}{% endblock %}
     </section>
-    <aside class="col-3 col-12 col-4-desktop">
+    <aside class="main__aside">
+			<div class="content">
         <h3>Latest posts</h3>
         <ul>
             {% for post in collections.lastPosts %}
             <li><a href="/{{ post.path }}/">{{ post.title }}</a></li>
             {% endfor %}
         </ul>
+			</div>
     </aside>
 </main>
-<footer role="contentinfo" class="clear">
-    <div class="col-8-desktop col-12">
-        If needed, <a href="https://github.com/jwellner/www.wllnr.nl/issues/new">leave some feedback</a>
+<footer class="footer">
+    <div class="footer__section">
+       If needed, <a href="https://github.com/jwellner/www.wllnr.nl/issues/new" class="footer__link">leave some feedback</a>
     </div>
-    <div class="col-4-desktop col-12">
-        <small class="right-desktop"><a href="https://github.com/jwellner/www.wllnr.nl/blob/master/src/{{ original_filename }}">src/{{ original_filename }}</a></small>
+    <div class="footer__section">
+      <small><a href="https://github.com/jwellner/www.wllnr.nl/blob/master/src/{{ original_filename }}" class="footer__link">src/{{ original_filename }}</a></small>
     </div>
 </footer>
 </body>

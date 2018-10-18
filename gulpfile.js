@@ -74,7 +74,7 @@ gulp.task('build.static', function() {
 });
 
 gulp.task('build.css', function () {
-    return gulp.src(['./src/scss/main.scss'])
+    return gulp.src(['./src/scss/index.scss'])
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(prefix("last 2 versions"))

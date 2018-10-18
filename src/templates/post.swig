@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block content %}
-<article>
+<article class="content">
 	<h1>{{ title }}</h1>
 	<p class="date">{{ date|date('F j, Y') }}</p>
 	{{ contents | safe }}
