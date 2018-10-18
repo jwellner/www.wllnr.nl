@@ -1,15 +1,14 @@
 box: devillex/docker-firebase
 
 build:
-  steps:
+	steps:
+    - script:
+        name: chmod
+        code: |
+					chmod -R 777 /pipeline/source/node_modules
+
     - npm-install
     - npm-test
-
-    - script:
-        name: prebuild
-        code: |
-          chmod -R 777 /pipeline/source/node_modules
-          npm run prebuild
 
     - hgen/gulp:
         tasks: build
