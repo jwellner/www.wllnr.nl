@@ -2,7 +2,7 @@ box: devillex/docker-firebase
 
 build:
   steps:
-    - npm-install
+    - npm-install:
         use-cache: false
     - npm-test
 
