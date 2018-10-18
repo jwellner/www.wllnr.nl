@@ -5,7 +5,7 @@ build:
     - script:
         name: prebuild
         code: |
-          chmod -R 777 /pipeline/source/node_modules
+          chmod -R 777 /pipeline/source
 
     - npm-install
     - npm-test
