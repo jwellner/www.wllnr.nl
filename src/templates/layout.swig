@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +7,12 @@
 
     <meta name="description" content="Jeroen Wellner - Freelance Mobile &amp; Web Developer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="theme-color" content="#1258A5">
 
     <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 
     {% block head %}
-    <link rel="stylesheet" href="/css/index.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/css/index.css" inline>
     {% endblock %}
 </head>
 <body class="page">

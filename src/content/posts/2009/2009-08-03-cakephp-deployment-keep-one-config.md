@@ -34,7 +34,7 @@ SetEnv sets the APPLICATION_ENV envrionment variable to development for this vir
 Next change your config/database.php to something like this:
 
 
-<blockquote><?php
+<blockquote>
 class DATABASE_CONFIG {
 
 var $default = array(
@@ -71,7 +71,7 @@ $this->default = array_merge($this->default, $this->{$env});
 }
 }
 }
-?></blockquote>
+</blockquote>
 
 
 Notice the __construct function. This function merges the default database parameters with the current environment parameters.

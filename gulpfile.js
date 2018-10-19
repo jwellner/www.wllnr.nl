@@ -13,7 +13,9 @@ var gulp = require('gulp'),
     webserver = require('gulp-webserver'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
-	prefix = require('gulp-autoprefixer');
+    prefix = require('gulp-autoprefixer'),
+    inlinesource = require('gulp-inline-source'),
+    htmlmin = require('gulp-htmlmin');
 
 
 gulp.task('clean', function() {
@@ -21,7 +23,7 @@ gulp.task('clean', function() {
         .pipe(rimraf());
 });
 
-gulp.task('build.static', function() {
+gulp.task('build.static', ['build.css'], function() {
     return gulp.src("./src/**/*.md")
         .pipe(gulp_front_matter()).on("data", function(file) {
             assign(file, file.frontMatter);
@@ -70,6 +72,12 @@ gulp.task('build.static', function() {
                 warn: true
             }))
         )
+        .pipe(inlinesource({
+            rootpath: './build'
+        }))
+        .pipe(htmlmin({
+            collapseWhitespace: true
+        }))
         .pipe(gulp.dest("./build"));
 });
 
@@ -99,7 +107,7 @@ gulp.task('copy:assets', function() {
 });
 
 gulp.task('watch', ['watch:css', 'watch:content', 'watch:templates']);
-gulp.task('build', ['build.static', 'build.css', 'copy:assets']);
+gulp.task('build', ['build.static', 'copy:assets']);
 gulp.task('serve', ['build', 'watch'], function() {
     return gulp.src('build')
         .pipe(webserver({

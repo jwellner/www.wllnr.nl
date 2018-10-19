@@ -17,15 +17,16 @@
 
 .navigation__item-link {
 	padding: 15px 16px;
-	background-color: #2A85E8;
+	background-color: #1258A5;
 	color: #eee;
 	display: block;
 	text-align: center;
-	text-decoration: none;
+  text-decoration: none;
+  font-weight: bold;
 
 	&:hover {
 		text-decoration: underline;
-		background-color: lighten(#2A85E8, 10%);
+		background-color: darken(#1258A5, 10%);
 	}
 
 	@include breakpoint('small') {
