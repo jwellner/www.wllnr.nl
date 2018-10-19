@@ -4,6 +4,7 @@
   "description": "Static blog: www.wllnr.nl",
   "main": "build/index.html",
   "devDependencies": {
+    "firebase-tools": "^5.1.1",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-front-matter": "^1.3.0",
@@ -28,7 +29,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "deploy": "gsutil -m rsync -r -d build/ gs://www.wllnr.nl"
+    "deploy": "gsutil -m rsync -r -d build/ gs://www.wllnr.nl",
+    "firebase-deploy": "firebase deploy --token=$FIREBASE_TOKEN --project=$FIREBASE_PROJECT",
+    "firebase-login": "firebase login"
   },
   "author": "Jeroen Wellner",
   "license": "CC0 1.0 Universal",

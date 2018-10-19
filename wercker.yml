@@ -1,17 +1,11 @@
-box: devillex/docker-firebase:latest
+box: node:latest
 
 build:
   steps:
     - script:
         name: npm install
         code: |
-          sudo npm install
-
-    - script:
-        name: rebuild node-sass
-        code: |
-          sudo chmod -R 777 $WERCKER_ROOT/node_modules/node-sass
-          sudo npm rebuild node-sass
+          npm install
 
     - hgen/gulp:
         tasks: build
@@ -32,7 +26,7 @@ deploy:
 
 deploy-firebase:
   steps:
-    - devillex/firebase-deploy@1.2.0:
-        project: $FIREBASE_PROJECT
-        token: $FIREBASE_TOKEN
-        message: "Wercker deploy"
+    - script:
+        name: Firebase deploy
+          code: |
+            npm run firebase-deploy
