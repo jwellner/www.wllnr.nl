@@ -2,15 +2,12 @@ box: devillex/docker-firebase
 
 build:
   steps:
-    - script:
-        name: chmod
-        code: |
-          chown -R root $WERCKER_ROOT
-          chmod -R 777 $WERCKER_ROOT
-          mkdir -p /pipeline/source/node_modules/node-sass/vendor
-
     - npm-install
-    - npm-test
+    - script:
+        name: rebuild node-sass
+        code: |
+          chmod -R 777 /pipeline/source/node_modules/node-sass
+          npm rebuild node-sass
 
     - hgen/gulp:
         tasks: build
