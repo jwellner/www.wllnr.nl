@@ -7,6 +7,12 @@ build:
         code: |
           npm install
 
+    - script:
+        name: rebuild node-sass
+        code: |
+          sudo chmod -R 777 $WERCKER_ROOT/node_modules/node-sass
+          sudo npm rebuild node-sass
+
     - hgen/gulp:
         tasks: build
 
@@ -28,5 +34,5 @@ deploy-firebase:
   steps:
     - script:
         name: Firebase deploy
-          code: |
-            npm run firebase-deploy
+        code: |
+          npm run firebase-deploy
