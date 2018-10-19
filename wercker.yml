@@ -1,4 +1,4 @@
-box: devillex/docker-firebase:latest
+box: devillex/docker-firebase:slim
 
 build:
   steps:
@@ -28,7 +28,7 @@ deploy:
 
 deploy-firebase:
   steps:
-    - devillex/firebase-deploy@1.1.0:
+    - devillex/firebase-deploy@1.2.0:
         project: $FIREBASE_PROJECT
         token: $FIREBASE_TOKEN
         message: "Wercker deploy"
