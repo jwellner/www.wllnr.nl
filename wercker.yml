@@ -2,11 +2,18 @@ box: devillex/docker-firebase:slim
 
 build:
   steps:
+    - script:
+        name: test permissions
+        code: |
+          mkdir -p $WERCKER_ROOT/node_modules
+          chmod -R 777 $WERCKER_ROOT/node_modules
+          echo "$(ls -l $WERCKER_ROOT)"
+
     - npm-install
     - script:
         name: rebuild node-sass
         code: |
-          chmod -R 777 /pipeline/source/node_modules/node-sass
+          chmod -R 777 $WERCKER_ROOT/node_modules/node-sass
           npm rebuild node-sass
 
     - hgen/gulp:
