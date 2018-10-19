@@ -1,4 +1,4 @@
-box: devillex/docker-firebase
+box: devillex/docker-firebase:latest
 
 build:
   steps:
