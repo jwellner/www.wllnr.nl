@@ -35,4 +35,4 @@ deploy-firebase:
     - script:
         name: Firebase deploy
         code: |
-          npm run firebase-deploy
+          npm run firebase-deploy -- --token "$FIREBASE_TOKEN" --project "$FIREBASE_PROJECT"

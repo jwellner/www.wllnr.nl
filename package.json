@@ -30,8 +30,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
     "deploy": "gsutil -m rsync -r -d build/ gs://www.wllnr.nl",
-    "firebase-deploy": "firebase deploy --token=$FIREBASE_TOKEN --project=$FIREBASE_PROJECT",
-    "firebase-login": "firebase login"
+    "firebase-deploy": "firebase deploy",
+    "firebase-token": "firebase login:ci"
   },
   "author": "Jeroen Wellner",
   "license": "CC0 1.0 Universal",
