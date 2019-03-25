@@ -11,22 +11,20 @@ I make my living as a Freelance Web Developer at my own consultancy firm Wellner
 ## Technology stack
 I love trying new technologies. Below is a list of technologies I currently like to work with (no particular order).
 
-  * [Angular](https://angular.io/) / [React](https://reactjs.org/) (javascript)
+	* [Docker](https://www.docker.com/) / [kubernetes](https://kubernetes.io/)
+  * **Javascript** [React](https://reactjs.org/) / [Angular](https://angular.io/)
   * [Ionic Framework](http://ionicframework.com/)
-  * [Cordova](http://cordova.apache.org)
-  * [Laravel](http://laravel.com/) / [Slim](http://www.slimframework.com/) (php)
-  * [Django](https://www.djangoproject.com/) (python)
+  * **Python** [Django](https://www.djangoproject.com/)
+  * **PHP** [Laravel](http://laravel.com/) / [Slim](http://www.slimframework.com/)
   * [Sass](http://sass-lang.com/) / [Less](http://lesscss.org/) (css)
-  * [Node.js](http://nodejs.org/) (javascript)
   * [OSX](https://www.apple.com/osx/) / [Ubuntu (server)](http://www.ubuntu.com/server)
   * [Git](https://github.com/jwellner) / [Gitlab](https://gitlab.com/jwellner)
-  * [Docker](https://www.docker.com/)
   * [Wercker](https://www.wercker.com)
   * [Google Cloud](https://cloud.google.com/storage/)
   * [Amazon Web Services](https://aws.amazon.com/)
 
 ## Availability
-I am currently available for **remote** projects.
+I am currently not available for new projects.
 
 ## Contact me
 
