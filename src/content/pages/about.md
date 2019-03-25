@@ -11,7 +11,7 @@ I make my living as a Freelance Web Developer at my own consultancy firm Wellner
 ## Technology stack
 I love trying new technologies. Below is a list of technologies I currently like to work with (no particular order).
 
-	* [Docker](https://www.docker.com/) / [kubernetes](https://kubernetes.io/)
+  * [Docker](https://www.docker.com/) / [kubernetes](https://kubernetes.io/)
   * **Javascript** [React](https://reactjs.org/) / [Angular](https://angular.io/)
   * [Ionic Framework](http://ionicframework.com/)
   * **Python** [Django](https://www.djangoproject.com/)
