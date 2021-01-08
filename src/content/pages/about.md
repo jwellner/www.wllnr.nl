@@ -3,7 +3,7 @@ layout: page.swig
 slug: about
 title: About me
 ---
-I am Jeroen Wellner, born may 13th 1979, living in Utrecht in The Netherlands. I am a passionate amateur road cyclist ([add me on Strava](https://www.strava.com/athletes/461379)) and web developer.
+I am Jeroen Wellner, born in 1979, living in Utrecht in The Netherlands. I am a passionate amateur road cyclist ([add me on Strava](https://www.strava.com/athletes/461379)) and web developer.
 
 ## Work
 I make my living as a Freelance Web Developer at my own consultancy firm Wellner Consultancy. With over 20 years experience, I help clients like [Centraal Beheer Achmea](https://www.centraalbeheer.nl), [WCC Smart Search & Match](https://www.wcc-group.com/), [Agis zorgverzekeringen](http://www.agisweb.nl), [Rijkswaterstaat](http://www.rijkswaterstaat.nl) and many more, to build cool things for the Internet.
@@ -28,14 +28,6 @@ I am currently not available for new projects.
 
 ## Contact me
 
-**Wellner Consultancy**
-Hermelijnvlinderdijk 106
-3544ZC Utrecht
-KVK: 55985343 te Utrecht
-
-**Or:**
-
-  * Mail to: [jeroen@wllnr.nl](mailto:jeroen@wllnr.nl)
-  * Add me on [Twitter](http://twitter.com/jwellner)
+  * Mail to: [info@wllnr.nl](mailto:info@wllnr.nl)
   * Watch my [Github](https://github.com/jwellner) profile
   * Look at my [LinkedIn](http://www.linkedin.com/in/jeroenwellner) profile
