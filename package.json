@@ -17,7 +17,7 @@
     "gulp-webserver": "^0.9.1",
     "gulpsmith": "^0.6.0",
     "jstransformer-swig": "^1.0.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "lodash.assign": "^4.2.0",
     "metalsmith": "^2.1.0",
     "metalsmith-branch": "0.0.5",
