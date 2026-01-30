@@ -15,7 +15,7 @@
     "@metalsmith/markdown": "^1.10.0",
     "@metalsmith/metadata": "^0.3.0",
     "@metalsmith/permalinks": "^3.2.0",
-    "@metalsmith/sass": "^1.10.0",
+    "@metalsmith/sass": "^1.14.0",
     "@rollup/plugin-terser": "^0.4.4",
     "browser-sync": "^3.0.2",
     "jstransformer-nunjucks": "^1.2.0",
@@ -23,7 +23,8 @@
     "metalsmith-fingerprint": "^1.0.3",
     "metalsmith-html-minifier": "^4.0.1",
     "metalsmith-inline-css": "^1.0.12",
-    "rollup": "^4.52.4"
+    "rollup": "^4.57.1",
+    "cheerio": "^1.2.0"
   },
   "engines": {
     "node": ">=14.0.0"

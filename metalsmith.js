@@ -15,7 +15,8 @@ import sass from '@metalsmith/sass';
 import inlineCss from 'metalsmith-inline-css';
 import fingerprint from 'metalsmith-fingerprint';
 import rollup from './plugins/rollup/index.cjs';
-import assets from './plugins/assets/index.cjs'
+import assets from './plugins/assets/index.cjs';
+import inlineJs from './plugins/inlinejs/index.cjs';
 import terser from '@rollup/plugin-terser';
 
 // ESM does not currently import JSON modules by default.
@@ -105,6 +106,7 @@ function msBuild() {
         })
       )
       .use( inlineCss() )
+      .use( inlineJs() )
       .use( isProduction ? htmlMinifier() : noop )
       .use(
         assets({
