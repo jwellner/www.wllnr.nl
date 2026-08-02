@@ -1,0 +1,20 @@
+{
+  "name": "@wllnr/ssh",
+  "version": "1.0.0",
+  "description": "Fake SSH server for wllnr.nl terminal",
+  "type": "module",
+  "private": true,
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "@wllnr/term-core": "1.0.0",
+    "ssh2": "^1.16.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT"
+}

@@ -1,9 +1,7 @@
-import cloneCommandNode from './cloneCommandNode';
-import COMMANDS from './commands';
-import markup from './markup';
+import cloneCommandNode from './cloneCommandNode.js';
+import markup from './markup.js';
 
 export {
   cloneCommandNode,
-  COMMANDS,
   markup,
 };

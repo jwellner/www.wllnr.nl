@@ -4,13 +4,21 @@
   "description": "Static website with Javascript terminal",
   "author": "jeroen@wllnr.nl",
   "license": "MIT",
+  "private": true,
   "type": "module",
+  "workspaces": [
+    "packages/*",
+    "services/*"
+  ],
   "scripts": {
     "start": "cross-env NODE_ENV=development eleventy --serve --port=3000",
-    "build": "cross-env NODE_ENV=production eleventy"
+    "build": "cross-env NODE_ENV=production eleventy",
+    "start:ssh": "yarn workspace @wllnr/ssh start",
+    "dev:ssh": "yarn workspace @wllnr/ssh dev"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
+    "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-terser": "^0.4.4",
     "cheerio": "^1.2.0",
     "html-minifier-terser": "^7.2.0",
@@ -21,6 +29,7 @@
     "node": ">=18.0.0"
   },
   "dependencies": {
+    "@wllnr/term-core": "1.0.0",
     "cross-env": "^10.1.0",
     "normalize-css": "^2.3.1"
   }

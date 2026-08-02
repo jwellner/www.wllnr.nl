@@ -1,7 +1,11 @@
 FROM node:22 AS build
 WORKDIR /app
-COPY package*.json ./
-RUN yarn install
+
+COPY package.json yarn.lock ./
+COPY packages/term-core/package.json ./packages/term-core/
+COPY services/ssh/package.json ./services/ssh/
+RUN yarn install --frozen-lockfile
+
 COPY . .
 RUN yarn build
 

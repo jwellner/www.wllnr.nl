@@ -1,1 +1,3 @@
-export default ({ shell: { prompt, separator } }) => (`<div class="container"><output></output><div class="command"><div class="prompt">${prompt}${separator}</div><input class="input" spellcheck="false" autofocus aria-label="Input"/></div></div>`);
+export default ( { shell: { prompt, separator } } ) => (
+  `<div class="container"><output></output><div class="command"><div class="prompt">${ prompt }${ separator }</div><input class="input" spellcheck="false" autofocus aria-label="Input"/></div></div>`
+);

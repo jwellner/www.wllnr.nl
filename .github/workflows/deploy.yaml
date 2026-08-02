@@ -18,10 +18,18 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      - name: Build and publish release Docker image
+      - name: Build and publish website Docker image
         uses: VaultVulp/gp-docker-action@1.6.0
         with:
           github-token: ${{ secrets.TOKEN }}
           image-name: website
           extract-git-tag: true
           dockerfile: Dockerfile
+
+      - name: Build and publish term SSH Docker image
+        uses: VaultVulp/gp-docker-action@1.6.0
+        with:
+          github-token: ${{ secrets.TOKEN }}
+          image-name: term
+          extract-git-tag: true
+          dockerfile: services/ssh/Dockerfile

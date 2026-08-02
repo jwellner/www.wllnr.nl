@@ -1,6 +1,7 @@
 import * as sass from 'sass';
 import { rollup } from 'rollup';
 import terser from '@rollup/plugin-terser';
+import resolve from '@rollup/plugin-node-resolve';
 import * as cheerio from 'cheerio';
 import { minify } from 'html-minifier-terser';
 import fs from 'node:fs';
@@ -17,6 +18,7 @@ export default function ( eleventyConfig ) {
   eleventyConfig.addWatchTarget( 'src/js' );
   eleventyConfig.addWatchTarget( 'src/scss' );
   eleventyConfig.addWatchTarget( 'layouts' );
+  eleventyConfig.addWatchTarget( 'packages/term-core' );
 
   eleventyConfig.addPassthroughCopy( { 'public/assets': 'assets' } );
 
@@ -29,7 +31,10 @@ export default function ( eleventyConfig ) {
 
     const bundle = await rollup( {
       input: path.join( __dirname, 'src/js/main.js' ),
-      plugins: [ terser() ],
+      plugins: [
+        resolve( { browser: true, preferBuiltins: false } ),
+        terser(),
+      ],
     } );
     const { output } = await bundle.generate( {
       format: 'umd',
