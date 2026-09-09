@@ -5,8 +5,9 @@
   font-weight: bold;
   overflow: hidden;
   padding: 0.75em 1em;
-  min-width: 390px;
-  width: 66%;
+  box-sizing: border-box;
+  width: min(66%, 100%);
+  max-width: 100%;
   min-height: 200px;
   height: 360px;
   margin: 40px 0;

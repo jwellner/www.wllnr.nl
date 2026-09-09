@@ -1,18 +1,21 @@
-import HELP from "./help";
+import HELP from "./help.js";
+import escapeHtml from "./escapeHtml.js";
 
 const { localStorage } = window;
 const KEY = "VanillaTerm";
 const VERSION = "0.1.0";
 const DIRS = {
-    Desktop: [""],
+    Desktop: [],
     Documents: ["resume.txt"],
     tools: ["party.sh"],
 };
 
 function login_prompt(terminal) {
-    terminal.clear()
+    terminal.clear();
+    terminal.user = "";
     terminal.prompt("login", (name) => {
-        terminal.output(`Hi ${name}!`);
+        terminal.user = name;
+        terminal.output(`Hi ${escapeHtml(name)}!`);
         terminal.output("Type <u>help</u> to see a list of commands.");
     });
 }
@@ -23,7 +26,7 @@ export default {
     help: (terminal, [command]) => {
         if (command) {
             terminal.output(
-                `help: ${HELP[command] || `no help topics match <u>${command}</u>`}`,
+                `help: ${HELP[command] || `no help topics match <u>${escapeHtml(command)}</u>`}`,
             );
         } else {
             terminal.output(
@@ -40,9 +43,13 @@ export default {
             "Are you sure remove all your commands history? Y/N",
             (value) => {
                 if (value.trim().toUpperCase() === "Y") {
-                    localStorage.removeItem(KEY);
-                    terminal.history = []; // eslint-disable-line
-                    terminal.historyCursor = 0; // eslint-disable-line
+                    try {
+                        localStorage.removeItem(KEY);
+                    } catch {
+                        // Ignore storage failures.
+                    }
+                    terminal.history = [];
+                    terminal.historyCursor = 0;
                     terminal.output("History of commands wiped.");
                 }
             },
@@ -51,7 +58,7 @@ export default {
 
     contact: (terminal) => {
         terminal.output(
-            'You can mail me at <a href="mailto:jeroen@wllnr.nl">jeroen@wllnr.nl<a>.',
+            'You can mail me at <a href="mailto:jeroen@wllnr.nl">jeroen@wllnr.nl</a>.',
         );
     },
 
@@ -79,19 +86,18 @@ export default {
             terminal.idle();
 
             setTimeout(() => {
-                terminal.output(`kill: sending KILL signal to process ${pid}`);
-    
+                terminal.output(`kill: sending KILL signal to process ${escapeHtml(pid)}`);
+
                 setTimeout(() => {
                     terminal.DOM.container.style.opacity = 0;
                 }, 1000);
-    
+
                 setTimeout(() => {
                     terminal.clear();
                     terminal.DOM.container.style.opacity = 1;
                     terminal.output("Terminal rebooted.");
                     terminal.setPrompt();
                 }, 3000);
-    
             }, 1000);
 
             return;
@@ -113,11 +119,12 @@ export default {
             terminal.output("ping: missing operand");
             return;
         }
+        const safeHost = escapeHtml(host);
         terminal.idle();
         for (let i = 0; i < 4; i += 1) {
             setTimeout(() => {
                 terminal.output(
-                    `64 bytes from ${host}: icmp_seq=${i + 1} ttl=64 time=0.3 ms`,
+                    `64 bytes from ${safeHost}: icmp_seq=${i + 1} ttl=64 time=0.3 ms`,
                 );
             }, i * 500);
         }
@@ -139,7 +146,7 @@ export default {
         if (terminal.directory === "") {
             terminal.output(Object.keys(DIRS).join(" "));
         } else if (DIRS[terminal.directory]) {
-            terminal.output(DIRS[terminal.directory].join(" "));
+            terminal.output(DIRS[terminal.directory].join(" ") || "&nbsp;");
         }
     },
 
@@ -154,17 +161,16 @@ export default {
             terminal.setPrompt(`~/${dir}`);
             terminal.directory = dir;
             return;
-        } else {
-            // check if dir is .. or ~
-            if (dir == ".." || dir === "~") {
-                terminal.output("");
-                terminal.setPrompt(`~/`);
-                terminal.directory = "";
-                return;
-            }
         }
 
-        terminal.output(`cd: ${dir}: No such file or directory`);
+        if (dir == ".." || dir === "~") {
+            terminal.output("");
+            terminal.setPrompt(`~/`);
+            terminal.directory = "";
+            return;
+        }
+
+        terminal.output(`cd: ${escapeHtml(dir)}: No such file or directory`);
     },
 
     cat: (terminal, [file]) => {
@@ -173,7 +179,11 @@ export default {
             return;
         }
 
-        if (terminal.directory === "" && file == "Documents/resume.txt" || terminal.directory == "Documents" && file == "resume.txt") {
+        const isResume =
+            (terminal.directory === "" && file == "Documents/resume.txt") ||
+            (terminal.directory == "Documents" && file == "resume.txt");
+
+        if (isResume) {
             terminal.output(
                 "Jeroen Wellner\
                 <br>-----------------\
@@ -194,19 +204,20 @@ export default {
                 <br>MBO Informatica\
                 <br>-----------------\
             ");
-
-            return
+            return;
         }
 
-        terminal.output(`cat: ${file}: No such file or directory`);
+        terminal.output(`cat: ${escapeHtml(file)}: No such file or directory`);
     },
 
     whoami: (terminal) => {
-        terminal.output(terminal.user);
+        terminal.output(escapeHtml(terminal.user) || "&nbsp;");
     },
 
     who: (terminal) => {
-        terminal.output(`${terminal.user}   tty1     ${new Date().toUTCString()}`);
+        terminal.output(
+            `${escapeHtml(terminal.user)}   tty1     ${new Date().toUTCString()}`,
+        );
     },
 
     pwd: (terminal) => {
@@ -214,31 +225,40 @@ export default {
     },
 
     sudo: (terminal) => {
-        terminal.output(`${terminal.user} is not in the sudoers file. This incident will be reported`);
+        terminal.output(
+            `${escapeHtml(terminal.user)} is not in the sudoers file. This incident will be reported`,
+        );
     },
 
-    'party.sh': (terminal) => {
+    "party.sh": (terminal) => {
         if (terminal.directory !== "tools") {
             terminal.output("command not found: party.sh");
             return;
         }
 
         if (!terminal.party) {
-
             terminal.party = setInterval(() => {
-                const colors = ['black','red','orange','green','blue','white','yellow'];
-                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                const colors = [
+                    "black",
+                    "red",
+                    "orange",
+                    "green",
+                    "blue",
+                    "white",
+                    "yellow",
+                ];
+                const randomColor =
+                    colors[Math.floor(Math.random() * colors.length)];
                 document.body.style.backgroundColor = randomColor;
             }, 100);
 
-            // print party icon
             terminal.output("Let's get this party started! 🎉🎉🎉");
         }
     },
 
     history: (terminal) => {
         terminal.history.forEach((command, index) => {
-            terminal.output(`${index + 1}  ${command}`);
+            terminal.output(`${index + 1}  ${escapeHtml(command)}`);
         });
-    }
+    },
 };

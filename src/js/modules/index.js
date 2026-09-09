@@ -1,9 +1,6 @@
-import cloneCommandNode from './cloneCommandNode';
-import COMMANDS from './commands';
-import markup from './markup';
+import cloneCommandNode from "./cloneCommandNode.js";
+import COMMANDS from "./commands.js";
+import escapeHtml from "./escapeHtml.js";
+import markup from "./markup.js";
 
-export {
-  cloneCommandNode,
-  COMMANDS,
-  markup,
-};
+export { cloneCommandNode, COMMANDS, escapeHtml, markup };

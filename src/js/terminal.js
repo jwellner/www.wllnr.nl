@@ -1,20 +1,41 @@
-import { cloneCommandNode, COMMANDS, markup } from "./modules/index.js";
+import { cloneCommandNode, COMMANDS, escapeHtml, markup } from "./modules/index.js";
 
 const KEY = "VanillaTerm";
+const MAX_HISTORY = 100;
 
-const { addEventListener, localStorage } = window;
+const loadHistory = () => {
+    try {
+        const raw = window.localStorage.getItem(KEY);
+        if (!raw) return [];
+        const parsed = JSON.parse(raw);
+        return Array.isArray(parsed) ? parsed.slice(-MAX_HISTORY) : [];
+    } catch {
+        return [];
+    }
+};
+
+const saveHistory = (history) => {
+    try {
+        window.localStorage.setItem(
+            KEY,
+            JSON.stringify(history.slice(-MAX_HISTORY)),
+        );
+    } catch {
+        // Ignore quota / private-mode failures.
+    }
+};
 
 class Terminal {
     constructor(props = {}) {
         const {
             container = "vanilla-terminal",
             commands = {},
-            welcome = 'Hello welcome to <a href="">wllnr.nl</a>.\n',
+            welcome = 'Hello welcome to <a href="https://www.wllnr.nl">wllnr.nl</a>.\n',
             prompt = "~/",
             separator = "$",
         } = props;
         this.commands = Object.assign({}, commands, COMMANDS);
-        this.history = localStorage[KEY] ? JSON.parse(localStorage[KEY]) : [];
+        this.history = loadHistory();
         this.historyCursor = this.history.length;
         this.welcome = welcome;
         this.shell = { prompt, separator };
@@ -24,6 +45,7 @@ class Terminal {
 
         const el = document.getElementById(container);
         if (el) {
+            this.el = el;
             this.cacheDOM(el);
             this.addListeners();
             if (welcome) {
@@ -42,7 +64,6 @@ class Terminal {
         el.classList.add(KEY);
         el.insertAdjacentHTML("beforeEnd", markup(this));
 
-        // Cache DOM nodes
         const container = el.querySelector(".container");
         this.DOM = {
             container,
@@ -54,57 +75,51 @@ class Terminal {
     };
 
     addListeners = () => {
-        const { DOM } = this;
+        const { DOM, el } = this;
 
         const observer = new MutationObserver(() => {
             setTimeout(() => DOM.input.scrollIntoView(), 10);
         });
         observer.observe(DOM.output, { childList: true });
 
-        addEventListener("click", () => DOM.input.focus(), false);
+        el.addEventListener("click", () => DOM.input.focus(), false);
         DOM.output.addEventListener(
             "click",
             (event) => event.stopPropagation(),
             false,
         );
-        DOM.input.addEventListener("keyup", this.onKeyUp, false);
         DOM.input.addEventListener("keydown", this.onKeyDown, false);
         DOM.command.addEventListener("click", () => DOM.input.focus(), false);
-
-        addEventListener(
-            "keyup",
-            (event) => {
-                DOM.input.focus();
-                event.stopPropagation();
-                event.preventDefault();
-            },
-            false,
-        );
     };
 
-    onKeyUp = (event) => {
-        const { keyCode } = event;
-        const { DOM, history = [], historyCursor } = this;
-
-        if (keyCode === 27) {
-            // ESC key
-            DOM.input.value = "";
-            event.stopPropagation();
-            event.preventDefault();
-        } else if ([38, 40].includes(keyCode)) {
-            if (keyCode === 38 && historyCursor > 0) this.historyCursor -= 1; // {38} UP key
-            if (keyCode === 40 && historyCursor < history.length - 1)
-                this.historyCursor += 1; // {40} DOWN key
-
-            if (history[this.historyCursor])
-                DOM.input.value = history[this.historyCursor];
-        }
-    };
-
-    onKeyDown = ({ keyCode }) => {
+    onKeyDown = (event) => {
+        const { key } = event;
         const { commands = {}, DOM, history, onInputCallback, state } = this;
+
+        if (key === "Escape") {
+            DOM.input.value = "";
+            event.preventDefault();
+            return;
+        }
+
+        if (key === "ArrowUp" || key === "ArrowDown") {
+            if (key === "ArrowUp" && this.historyCursor > 0) {
+                this.historyCursor -= 1;
+            }
+            if (key === "ArrowDown" && this.historyCursor < history.length - 1) {
+                this.historyCursor += 1;
+            }
+            if (history[this.historyCursor]) {
+                DOM.input.value = history[this.historyCursor];
+            }
+            event.preventDefault();
+            return;
+        }
+
+        if (key !== "Enter") return;
+
         const commandLine = DOM.input.value.trim();
-        if (keyCode !== 13 || !commandLine) return;
+        if (!commandLine) return;
 
         const [command, ...parameters] = commandLine.split(" ");
 
@@ -116,25 +131,21 @@ class Terminal {
             return;
         }
 
-        // Save command line in history
         history.push(commandLine);
-        localStorage[KEY] = JSON.stringify(history);
+        saveHistory(history);
         this.historyCursor = history.length;
 
-        // Clone command as a new output line
         DOM.output.appendChild(cloneCommandNode(DOM.command));
 
-        // Clean command line
         DOM.command.classList.add("hidden");
         DOM.input.value = "";
 
-        // Dispatch command
         if (Object.keys(commands).includes(command)) {
             const callback = commands[command];
             if (callback) callback(this, parameters);
             if (onInputCallback) onInputCallback(command, parameters);
         } else {
-            this.output(`<u>${command}</u>: command not found.`);
+            this.output(`<u>${escapeHtml(command)}</u>: command not found.`);
         }
     };
 
